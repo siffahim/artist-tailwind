@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCGI</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!--Tailwind CDN link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="header border-b border-slate-800">
+        <a href="#" class="logo">
+            <img width="150" src="images/logo.png" alt="">
+        </a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="#">Road Map</a></li>
+                <li><a class="nav-link" href="#">Blog</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+                <button
+                    class="bg-gradient-to-r from-rose-600 to-rose-500 p-3 rounded-full flex items-center font-medium uppercase">
+                    <span class="ml-2">Join Discord</span>
+                </button>
+            </ul>
+        </nav>
+        <div class="mobile-navbar-btn">
+            <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+            <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
+    </header>
+
+    <main>
+        <!---------banner------------>
+        <section class="md:px-16 p-5">
+            <div class="md:flex items-center text-white">
+                <div>
+                    <div class="space-y-5">
+                        <h1 class="text-5xl font-bold">Digital Art & <br /> <span class="text-rose-600">Crafts</span>
+                            Collection.</h1>
+                        <p class="text-lg w-4/5">Create a Beautiful CGI products. Explore the best collection from
+                            popular
+                            creative
+                            & digital Artists.
+                        </p>
+                        <div class="flex">
+                            <button
+                                class="bg-gradient-to-r from-rose-600 to-rose-500 p-3 rounded-full flex items-center font-medium mr-12">
+                                <ion-icon name="rocket-outline"></ion-icon> <span class="ml-2">Explore Items</span>
+                            </button>
+                            <button class="flex items-center font-medium">
+                                <span class="mr-1">Learn More</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-2/4 mt-16">
+                        <div>
+                            <h2 class="text-rose-600 font-medium text-3xl counter" data-number="2500">0</h2>
+                            <p class="text-white font-medium tracking-wider">Art Works</p>
+                        </div>
+                        <div>
+                            <h2 class="text-rose-600 font-medium text-3xl counter" data-number="800">0</h2>
+                            <p class="text-white font-medium tracking-wider">Auctioneer</p>
+                        </div>
+                        <div>
+                            <h2 class="text-rose-600 font-medium text-3xl counter" data-number="1600">0</h2>
+                            <p class="text-white font-medium tracking-wider">Get Artists</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full" src="images/banner.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--------------Trending--------------->
+        <section class="my-28 md:px-16 p-5">
+            <div class="flex items-center justify-between">
+                <h1 class="text-3xl text-white font-extrabold mb-11">Trending</h1>
+                <h1 class="text-rose-600 items-center flex hover:text-rose-500">Discover more<ion-icon
+                        name="chevron-forward-outline">
+                    </ion-icon>
+                </h1>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5 text-white">
+                <div style="background: rgba(255,255,255,0.1)"
+                    class="p-5 rounded-lg border-2 border-slate-600 hover:border-pink-600">
+                    <img src="images/1.jpg" class="rounded-lg" alt="">
+                    <div class="flex justify-between mt-7">
+                        <h1 class="text-xl">3D Illustration</h1>
+                        <div
+                            class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                fill="white">
+                                <path
+                                    d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <div class="flex">
+                            <img class="w-11 rounded-2xl mr-3" src="images/01.jpg" alt="">
+                            <div>
+                                <h2>Creator</h2>
+                                <p>@Yomnaart</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Current Bid</h2>
+                            <p>2.04 ETH</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1);"
+                    class="p-5 rounded-lg border-2 border-slate-600 hover:border-pink-600">
+                    <img src="images/7.jpg" class="rounded-lg" alt="">
+                    <div class="flex justify-between mt-7">
+                        <h1 class="text-xl">Berries Art</h1>
+                        <div
+                            class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                fill="white">
+                                <path
+                                    d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <div class="flex">
+                            <img class="w-11 rounded-2xl mr-3" src="images/02.jpg" alt="">
+                            <div>
+                                <h2>Creator</h2>
+                                <p>@Yomnaart</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Current Bid</h2>
+                            <p>2.04 ETH</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1);"
+                    class="p-5 rounded-lg border-2 border-slate-600 hover:border-pink-600">
+                    <img src="images/3.jpg" class="rounded-lg" alt="">
+                    <div class="flex justify-between mt-7">
+                        <h1 class="text-xl">Purple Leaf</h1>
+                        <div
+                            class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                fill="white">
+                                <path
+                                    d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <div class="flex">
+                            <img class="w-11 rounded-2xl mr-3" src="images/03.jpg" alt="">
+                            <div>
+                                <h2>Creator</h2>
+                                <p>@Yomnaart</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Current Bid</h2>
+                            <p>2.04 ETH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-----------discover more------------>
+        <section class="my-28 md:px-16 p-5">
+            <div class="grid md:grid-cols-2 gap-x-10 text-white items-center">
+                <div class="md:px-10 space-y-5">
+                    <h2 class="text-xl text-rose-600 font-bold">Discover More</h2>
+                    <h1 class="text-5xl font-bold">Explore & Sell Your Awesome NFTs Art</h1>
+                    <p>Dolor repellendus temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus sae
+                        eveniet ut etvoluptates repudiandae sint et moles tiae non recusandae.
+                        Ac vulputate ornare donec orci sed gravida senectus. Felis quis morbi vivamus est eget sapien
+                        magnis quis.
+                    </p>
+                    <button
+                        class="bg-gradient-to-r from-rose-600 to-rose-500 p-3 rounded-full flex items-center font-medium mr-12">
+                        <span class="mr-2">Read More</span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </div>
+                <div class="relative">
+                    <div>
+                        <img class="discover-img  rounded-lg" src="images/1.jpg" alt="">
+                    </div>
+                    <div class="absolute -bottom-12 -left-12">
+                        <img class="discover-img-2 w-3/5  rounded-lg" src="images/3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----------popular artist----------->
+        <section class="my-28 md:px-16 p-5">
+            <h1 class="text-3xl text-white font-extrabold  mb-11">Popular Artist</h1>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/01.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-lg font-medium">Yomna Doe</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/2.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Leila Howlinsy</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/02.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Yomna Doe</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/03.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Wasim Doe</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/04.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Yara Yalma</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/05.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Ayloul Smith</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/06.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Bulent Howlinsy</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/07.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Yassir Yates</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arist-bg p-4 rounded-lg border border-slate-600 hover:border-pink-700">
+                    <div class="flex text-white">
+                        <img class="w-14 rounded-full mr-3" src="images/08.jpg" alt="">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Sinan Terry</h2>
+                            <div class="flex items-center">
+                                <div
+                                    class="bg-gradient-to-r from-rose-600 to-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2 text-white" viewBox="0 0 320 512"
+                                        fill="white">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="ml-2">14.03 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-----------Lastest news----------->
+        <section class="md:px-16 p-8">
+            <h1 class="text-3xl text-white font-extrabold  mb-11">Latest News</h1>
+            <div class="grid md:grid-cols-2 gap-x-10">
+                <div class="relative h-3/4 ">
+                    <img class="rounded-3xl w-full h-full" src="images/4.jpg" alt="">
+                    <div class="absolute bottom-0 backdrop-blur-lg rounded-b-3xl w-full p-8 ">
+                        <h1 class="text-lg text-white font-medium">Nftartwork</h1>
+                        <h1 class="text-2xl text-white font-bold hover:text-rose-600">How to Create Your 1st Crypto CGIs
+                        </h1>
+                        <div class="flex text-white mt-3">
+                            <div>
+                                <img class="w-16 rounded-2xl mr-3" src="images/2.jpg" alt="">
+                            </div>
+                            <div>
+                                <h2 class="text-lg font-medium">Creator</h2>
+                                <p class="text-lg">@Yomnaart</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative h-3/4">
+                        <img class="rounded-3xl w-full h-full" src="images/5.jpg" alt="">
+                        <div class="absolute bottom-0 backdrop-blur-lg rounded-b-3xl w-full p-8 ">
+                            <h1 class="text-lg text-white font-medium">Digitalart</h1>
+                            <h1 class="text-2xl text-white hover:text-rose-600 font-bold">It’s the Great Chance to
+                                Invest in Crafts</h1>
+                            <div class="flex text-white mt-3">
+                                <div>
+                                    <img class="w-16 rounded-2xl mr-3" src="images/05.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h2 class="text-lg font-medium">Creator</h2>
+                                    <p class="text-lg">@Yomnaart</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!--footer news-->
+        <section class="md:px-16 px-5 py-16 text-white border-t border-slate-800">
+            <div class="grid md:grid-cols-4 gap-8 text-white">
+                <div>
+                    <h1 class="text-2xl"><img width="50%" src="images/logo.png" alt=""></h1>
+                    <P class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae tempora
+                        optio quisquam
+                        asperiores eum maxime doloribus eaque fugit incidunt.</P>
+                </div>
+                <div class="space-y-3">
+                    <h1 class="text-2xl">Site Map</h1>
+                    <ul class="space-y-2">
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> Home
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> About Us
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> RoadMap
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> Our Team
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> FAQ
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> Article
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h1 class="text-2xl">Company</h1>
+                    <ul class="space-y-2">
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> Help & Support
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> Terms Candittions
+                        </li>
+                        <li class="text-base">
+                            <ion-icon name="chevron-forward-outline"></ion-icon> Privacy Policy
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1 class="text-2xl">Subscriber Request</h1>
+                    <div class="mt-3">
+                        <input type="email"
+                            class="bg-transparent border border-slate-800 rounded-l-full outline-0 px-3 py-3"
+                            placeholder="Email Address">
+                        <button
+                            class="bg-gradient-to-r from-rose-600 to-rose-500 hover:bg-rose-100 p-3 px-4  rounded-r-full -ml-1">
+                            <ion-icon name="send-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="md:flex items-center justify-between border-t border-slate-900  md:px-16 px-5 py-5 text-white">
+            <div>
+                <p>Copyright © 2022, MetaNFT All Rights Reserved.</p>
+            </div>
+            <div class="flex">
+                <li
+                    class="list-none w-10 h-10 flex items-center justify-center rounded-full border border-slate-800 text-xl mr-2 hover:bg-gradient-to-r from-rose-600 to-rose-500">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </li>
+                <li
+                    class="list-none w-10 h-10 flex items-center justify-center rounded-full border border-slate-800 text-xl mr-2 hover:bg-gradient-to-r from-rose-600 to-rose-500">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </li>
+                <li
+                    class="list-none w-10 h-10 flex items-center justify-center rounded-full border border-slate-800 text-xl mr-2 hover:bg-gradient-to-r from-rose-600 to-rose-500">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </li>
+                <li
+                    class="list-none w-10 h-10 flex items-center justify-center rounded-full border border-slate-800 text-xl mr-2 hover:bg-gradient-to-r from-rose-600 to-rose-500">
+                    <ion-icon name="logo-behance"></ion-icon>
+                </li>
+            </div>
+        </div>
+    </footer>
+
+    <!--------------Icon CDN-------------->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--my Script-->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
